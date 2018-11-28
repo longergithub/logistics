@@ -1,0 +1,63 @@
+.v-login
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .4);
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.login-form li
+{
+    padding: 6px 0;
+    display: flex;
+}
+
+.login-form span
+{
+    width: 72px;
+    text-align: right;
+    font-size: 18px;
+    color: #fff;
+}
+
+.login-form input
+{
+    flex: 1;
+    font-size: 16px;
+    border: none;
+    padding-bottom: 6px;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.verify-code-box
+{
+    width: 106px;
+    text-align: center;
+}
+
+#imgVerifyCode
+{
+    cursor: pointer;
+}
+
+#btnChangeCode
+{
+    vertical-align: 8px;
+    margin-left: 6px;
+    color: #fff;
+}
+
+.login-form .btn-login
+{
+    margin-top: 20px;
+    min-width: 80px;
+    font-size: 16px;
+    background: #fff;
+}

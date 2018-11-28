@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>错误提示</title>
+	
+    <link rel="stylesheet" type="text/css" href="/Public/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="/Public/css/404.css" />
+</head>
+<body>
+    <div class="v-404">
+        <p class="main"><a class="text-link" href="/"><span id="J-timer" class="timer">3</span>秒后自动返回首页</a></p>
+    </div>
+
+    <script type="text/javascript">
+		window.onload = function()
+        {
+			var timer = document.getElementById("J-timer"),
+				timeout = 3;	
+
+			var interval = window.setInterval(function()
+            {
+				timeout--;
+
+				if(timeout > 0)
+                {
+					timer.innerHTML = timeout;
+				}
+				else
+                {
+					window.clearInterval(interval);
+
+					window.location.href = "/";
+				}
+			}, 1000);
+		}
+    </script>
+</body>
+</html>

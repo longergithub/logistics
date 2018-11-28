@@ -1,0 +1,241 @@
+.top-wrapper
+{
+    display: table;
+    width: 100%;
+    padding: 15px 0 15px 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .4);
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.top-wrapper .person-box
+{
+    display: table-cell;
+    width: 100%;
+}
+
+.top-wrapper .person-box img
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.top-wrapper .person-box .username
+{
+    font-size: 14px;
+    vertical-align: 15px;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.top-wrapper .menus
+{
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 460px;
+    max-width: 460px;
+}
+
+.top-wrapper .menus:before
+{
+    content: "";
+    display: table;
+}
+
+.top-wrapper .menus:after
+{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.top-wrapper .menus li
+{
+    float: left;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.is-mobile .top-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    padding-left: 0;
+}
+
+.is-mobile .person-box
+{
+    display: block;
+    padding-bottom: 10px;
+}
+
+.is-mobile .person-box img
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.is-mobile .person-box .username
+{
+    font-size: 12px;
+    vertical-align: 10px;
+}
+
+.is-mobile .mobile-menus
+{
+    color: #fff;
+    font-size: 14px;
+}
+
+.is-mobile .mobile-menus a
+{
+    padding: 0 8px;
+}
+
+.is-mobile .mobile-menus a:first-of-type
+{
+    padding-left: 0;
+}
+
+.is-mobile .mobile-menus a:last-of-type
+{
+    padding-right: 0;
+}
+
+.component-dialog
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.component-dialog.show
+{
+    opacity: 1;
+    z-index: 999;
+}
+
+.component-dialog .dialog-box
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 80%;
+    background: #fff;
+    padding: 30px 20px 10px;
+    border-radius: 5px;
+}
+
+.component-dialog .dialog-box .icon-close
+{
+    position: absolute;
+    top: -6px;
+    right: 10px;
+    font-size: 30px;
+}
+
+.form-dialog .form-box li
+{
+    display: flex;
+    padding: 10px 0;
+}
+
+.form-dialog .form-box span
+{
+    display: table-cell;
+    vertical-align: top;
+    min-width: 54px;
+    max-width: 54px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+.form-dialog .form-box input,
+.form-dialog .form-box textarea
+{
+    display: table-cell;
+    width: 100%;
+    font-size: 14px;
+    padding: 6px;
+}
+
+.form-dialog .form-box .buttons-box
+{
+    justify-content: center;
+}
+
+.form-dialog .form-box .btn
+{
+    display: inline-block;
+    font-size: 16px;
+    background: #0092FF;
+    color: #fff;
+    min-width: 80px;
+}
+
+.form-dialog .form-box .btn:first-of-type
+{
+    margin-right: 20px;
+    background: #979797;
+}
+
+.update-password-dialog .form-box span
+{
+    min-width: 66px;
+    max-width: 66px;
+}
+
+.update-password-dialog .dialog-box
+{
+    min-width: auto;
+    width: 300px;
+}
+
+.update-password-dialog .form-box .tips
+{
+    color: #ff0000;
+}
+
+.logout-confirm-dialog .dialog-box
+{
+    min-width: auto;
+    width: 260px;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+}
+
+.logout-confirm-dialog .buttons-box
+{
+    padding-top: 20px;
+}
+
+.logout-confirm-dialog .buttons-box .btn
+{
+    display: inline-block;
+    font-size: 16px;
+    background: #0092FF;
+    color: #fff;
+    min-width: 80px;
+}
+
+.logout-confirm-dialog .buttons-box .btn:first-of-type
+{
+    margin-right: 20px;
+    background: #979797;
+}

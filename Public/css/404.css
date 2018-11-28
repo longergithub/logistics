@@ -1,0 +1,41 @@
+.v-404
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #F9F9F9;
+}
+
+
+.main
+{
+    position: relative;
+    width: 488px;
+    height: 383px;
+    margin: 77px auto 0;
+    background: transparent url(/Public/images/404.png) left top no-repeat;
+}
+
+.main .text-link
+{
+    display: block;
+    position: absolute;
+    left: 165px;
+    top: 420px;
+    font-size: 14px;
+    color: #37c;
+}
+
+.main .text-link:hover
+{
+    color: #f60;
+    text-decoration: underline;
+}
+
+.main .timer
+{
+    padding-right: 4px;
+    font-weight: bold;
+}

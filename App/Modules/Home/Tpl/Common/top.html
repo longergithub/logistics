@@ -1,0 +1,83 @@
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/views/top.css?v=1.0.0" />
+
+<div class="top-wrapper">
+    <p class="person-box"><img src="__PUBLIC__/images/default-avatar.png" /><span class="username">{$name}</span></p>
+    <php>if(isMobile()){</php>
+        <p class="mobile-menus">
+            <if condition="MODULE_NAME eq 'Index' and ACTION_NAME eq 'index'"><a href="javascript:;">首页</a><else /><a href="/Index">首页</a></if>
+            <a id="btnShowAddVehicle" href="javascript:;">录入车辆{$moduleName}{$actionName}</a>
+            <if condition="MODULE_NAME eq 'Index' and ACTION_NAME eq 'addVehicleRecord'"><a href="javascript:;">录入行车日记</a><else /><a href="/Index/addVehicleRecord">录入行车日记</a></if>
+            <a id="btnShowUpdatePassword" href="javascript:;">修改密码</a>
+            <a id="btnShowLogout" href="javascript:;">退出</a>
+        </p>
+    <php>}else{</php>
+        <ul class="menus">
+            <li><if condition="MODULE_NAME eq 'Index' and ACTION_NAME eq 'index'"><a href="javascript:;">首页</a><else /><a href="/Index">首页</a></if></li>
+            <li><a id="btnShowAddVehicle" href="javascript:;">录入车辆</a></li>
+            <li><if condition="MODULE_NAME eq 'Index' and ACTION_NAME eq 'addVehicleRecord'"><a href="javascript:;">录入行车日记</a><else /><a href="/Index/addVehicleRecord">录入行车日记</a></if></li>
+            <li><a id="btnShowUpdatePassword" href="javascript:;">修改密码</a></li>
+            <li><a id="btnShowLogout" href="javascript:;">退出</a></li>
+        </ul>
+    <php>}</php>
+</div>
+
+<div id="dialogAddVehicle" class="component-dialog form-dialog add-vehicle-dialog">
+    <div class="dialog-box">
+        <a href="javascript:;" class="icon-close close-add-vehicle-dialog">&times;</a>
+        <ul class="form-box">
+            <li>
+                <span>车牌号</span>
+                <input id="iptPlateNo" type="text" maxlength="10" placeholder="请输入车牌号" />
+            </li>
+            <li>
+                <span>司机</span>
+                <input id="iptDriver" type="text" maxlength="20" placeholder="请输入司机" />
+            </li>
+            <li>
+                <span>备注</span>
+                <textarea id="txaRemark" rows="6" maxlength="200" placeholder="请输入备注"></textarea>
+            </li>
+            <li class="buttons-box">
+                <a href="javascript:;" class="btn close-add-vehicle-dialog">取消</a>
+                <a id="btnAddVehicle" href="javascript:;" class="btn">确定</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="dialogUpdatePassword" class="component-dialog form-dialog update-password-dialog">
+    <div class="dialog-box">
+        <a href="javascript:;" class="icon-close close-update-password-dialog">&times;</a>
+        <ul class="form-box">
+            <li>
+                <span>密码</span>
+                <input id="iptPassword" type="password" maxlength="20" placeholder="请输入密码" />
+            </li>
+            <li>
+                <span>确认密码</span>
+                <input id="iptConfirmPassword" type="password" maxlength="20" placeholder="请输入确认密码" />
+            </li>
+            <li class="tips"><span></span>请牢记修改后的密码。</li>
+            <li class="buttons-box">
+                <a href="javascript:;" class="btn close-update-password-dialog">取消</a>
+                <a id="btnUpdatePassword" href="javascript:;" class="btn">确定</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="dialogLogoutConfirm" class="component-dialog logout-confirm-dialog">
+    <div class="dialog-box">
+        <p>确定要退出系统？</p>
+        <p class="buttons-box">
+            <a href="javascript:;" class="btn close-logout-confirm-dialog">取消</a>
+            <a id="btnLogout" href="javascript:;" class="btn">确定</a>
+        </p>
+    </div>
+</div>
+
+<div id="dialogMessage" class="message-dialog">
+    <div class="dialog-box"><p id="pText"></p></div>
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/js/views/top.js?v=1.0.0"></script>

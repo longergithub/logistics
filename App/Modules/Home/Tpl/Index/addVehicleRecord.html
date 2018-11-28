@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <include file="Common:meta" />
+    <title>万汇物流行车日记统计系统 - 新增行车日记</title>
+
+    <include file="Common:css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/views/add-vehicle-record.css?v=1.0.0" />
+
+    <include file="Common:js" />
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <p>你的浏览器可能无法正常浏览本站，推荐使用 <a href="http://www.google.com/chrome" target="_blank" title="下载 Chrome 浏览器">Chrome</a>、<a href="http://www.apple.com/safari" target="_blank" title="下载 Safari 浏览器">Safari</a>、<a href="http://firefox.com.cn/download/" target="_blank" title="下载 Firefox 浏览器">Firefox</a> 等浏览器，或者升级您的 <a href="http://windows.microsoft.com/zh-CN/internet-explorer/download-ie" target="_blank" title="下载最新版的 Internet Explorer">Internet Explorer</a><a href="javascript:void(0);" class="close-btn">&times;</a></p>
+    <![endif]-->
+    
+    <div class="v-main<php>if(isMobile()){</php> is-mobile<php>}</php>">
+        <include file="Common:top" />
+        
+        <div class="center-wrapper add-record-form">
+            <ul>
+                <li>
+                    <span>车号</span>
+                    <select id="selVehicle">
+                        <option value="">请选择</option>
+                        <foreach name="vehicles" item="v">
+                            <option value="{$v.id}">{$v.plateNo}</option>
+                        </foreach>
+                    </select>
+                </li>
+                <li>
+                    <span>数量</span>
+                    <input id="iptQuantity" type="text" maxlength="8" placeholder="请输入数量" />
+                </li>
+                <li>
+                    <span>箱号</span>
+                    <input id="iptCaseNo" type="text" maxlength="10" placeholder="请输入箱号" />
+                </li>
+                <li>
+                    <span>起点</span>
+                    <input id="iptStartLocation" type="text" maxlength="10" placeholder="请输入起点" />
+                </li>
+                <li>
+                    <span>终点</span>
+                    <input id="iptEndLocation" type="text" maxlength="10" placeholder="请输入终点" />
+                </li>
+                <li>
+                    <span>货物名称</span>
+                    <input id="iptGoodsName" type="text" maxlength="50" placeholder="请输入货物名称" />
+                </li>
+                <li>
+                    <span>营业额</span>
+                    <input id="iptTurnoverAmount" type="text" maxlength="8" placeholder="请输入营业额" />
+                </li>
+                <li>
+                    <span>计件工资</span>
+                    <input id="iptDaySalary" type="text" maxlength="8" placeholder="请输入计件工资" />
+                </li>
+                <li>
+                    <span>过路费(ETC)</span>
+                    <input id="iptETCAmount" type="text" maxlength="8" placeholder="请输入过路费(ETC)" />
+                </li>
+                <li>
+                    <span>过路费(现金)</span>
+                    <input id="iptRoadAmount" type="text" maxlength="8" placeholder="请输入过路费(现金)" />
+                </li>
+                <li>
+                    <span>加油金额</span>
+                    <input id="iptRefuelAmount" type="text" maxlength="8" placeholder="请输入加油金额" />
+                </li>
+                <li>
+                    <span>洗车加水金额</span>
+                    <input id="iptWashAmount" type="text" maxlength="8" placeholder="请输入洗车加水金额" />
+                </li>
+                <li>
+                    <span>尿素金额</span>
+                    <input id="iptTailGasDealAmount" type="text" maxlength="8" placeholder="请输入尿素金额" />
+                </li>
+                <li>
+                    <span>交警罚款</span>
+                    <input id="iptPolicePenaltyAmount" type="text" maxlength="8" placeholder="请输入交警罚款" />
+                </li>
+                <li>
+                    <span>路政罚款</span>
+                    <input id="iptRoadPenaltyAmount" type="text" maxlength="8" placeholder="请输入路政罚款" />
+                </li>
+                <li>
+                    <span>预支金额</span>
+                    <input id="iptAdvanceAmount" type="text" maxlength="8" placeholder="请输入预支金额" />
+                </li>
+                <li>
+                    <span>ETC充值金额</span>
+                    <input id="iptEtcRechargeAmount" type="text" maxlength="8" placeholder="请输入ETC充值金额" />
+                </li>
+                <li class="checkbox-item">
+                    <input id="cbIsFixed" type="checkbox" />
+                    <span>是否有维修</span>
+                </li>
+                <li id="liFixedAmount">
+                    <span>维修金额</span>
+                    <input id="iptFixedAmount" type="text" maxlength="8" placeholder="请输入维修金额" />
+                </li>
+                <li id="liFixedFactoryName">
+                    <span>维修厂名称</span>
+                    <input id="iptFixedFactoryName" type="text" maxlength="100" placeholder="请输入维修厂名称" />
+                </li>
+                <li id="litxaFixedContent">
+                    <span class="textarea-span">维修项目</span>
+                    <textarea id="txaFixedContent" rows="6" maxlength="100" placeholder="请输入维修项目"></textarea>
+                </li>
+                <li>
+                    <span class="textarea-span">备注</span>
+                    <textarea id="txaRemark" rows="6" maxlength="100" placeholder="请输入备注"></textarea>
+                </li>
+                <li>
+                    <span></span>
+                    <a id="btnAdd" href="javascript:;">确定录入</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/js/views/add-vehicle-record.js?v=1.0.0"></script>
+</body>
+</html>

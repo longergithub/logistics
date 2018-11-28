@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <include file="Common:meta" />
+    <title>万汇物流行车日记统计系统</title>
+
+    <include file="Common:css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/views/index.css?v=1.0.0" />
+
+    <include file="Common:js" />
+    <script type="text/javascript" src="__PUBLIC__/js/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <p>你的浏览器可能无法正常浏览本站，推荐使用 <a href="http://www.google.com/chrome" target="_blank" title="下载 Chrome 浏览器">Chrome</a>、<a href="http://www.apple.com/safari" target="_blank" title="下载 Safari 浏览器">Safari</a>、<a href="http://firefox.com.cn/download/" target="_blank" title="下载 Firefox 浏览器">Firefox</a> 等浏览器，或者升级您的 <a href="http://windows.microsoft.com/zh-CN/internet-explorer/download-ie" target="_blank" title="下载最新版的 Internet Explorer">Internet Explorer</a><a href="javascript:void(0);" class="close-btn">&times;</a></p>
+    <![endif]-->
+
+    <div class="v-main<php>if(isMobile()){</php> is-mobile<php>}</php>">
+        <include file="Common:top" />
+
+        <div class="center-wrapper">
+            <ul class="search-form">
+                <li>
+                    <span>日期：</span>
+                    <input id="iptStartDate" class="Wdate" type="text" placeholder="请输入开始日期" onclick="WdatePicker({dateFmt: 'yyyy-MM-dd', readOnly: true})" />&nbsp;-&nbsp;<input id="iptEndDate" class="Wdate" type="text" placeholder="请输入结束日期" onclick="WdatePicker({dateFmt: 'yyyy-MM-dd', readOnly: true})" />
+                </li>
+                <li>
+                    <span>车牌号：</span>
+                    <select id="selVehicle">
+                        <option value="">所有</option>
+                        <foreach name="vehicles" item="v">
+                            <option value="{$v.id}">{$v.plateNo}</option>
+                        </foreach>
+                    </select>
+                </li>
+                <li>
+                    <a id="btnSearch" href="javascript:;" class="btn"><img src="__PUBLIC__/images/loading.gif" /><i>查询</i></a>
+                    <a id="btnExport" href="javascript:;" class="btn"><img src="__PUBLIC__/images/loading.gif" /><i>导出</i></a>
+                </li>
+            </ul>
+
+            <div class="table-box">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th style="min-width: 100px;">日期</th>
+                            <th style="min-width: 60px;">数量</th>
+                            <th style="min-width: 80px;">箱号</th>
+                            <th style="min-width: 100px;">起点</th>
+                            <th style="min-width: 100px;">终点</th>
+                            <th style="min-width: 100px;">货物名称</th>
+                            <th style="min-width: 80px;">营业额</th>
+                            <th style="min-width: 80px;">计件工资</th>
+                            <th style="min-width: 80px;">过路费(ETC)</th>
+                            <th style="min-width: 80px;">过路费(现金)</th>
+                            <th style="min-width: 80px;">加油金额</th>
+                            <th style="min-width: 100px;">洗车加水金额</th>
+                            <th style="min-width: 80px;">尿素金额</th>
+                            <th style="min-width: 80px;">交警罚款</th>
+                            <th style="min-width: 80px;">路政罚款</th>
+                            <th style="min-width: 80px;">维修金额</th>
+                            <th style="min-width: 80px;">预支金额</th>
+                            <th style="min-width: 80px;">ETC充值</th>
+                            <th style="min-width: 100px;color: red;">小计</th>
+                            <th style="min-width: 100px;">备注</th>
+                            <th style="min-width: 100px;">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div id="divPagingBar" class="paging-bar">
+                    <span><i id="lblTotalCount">1</i>&nbsp;条记录&nbsp;<i id="lblCurrentPage">1</i>/<i id="lblTotalPage">2</i>&nbsp;页</span>
+                    <a id="btnFirstPage" href="javascript:;" class="enable">首页</a>
+                    <a id="btnPreviousPage" href="javascript:;" class="enable">上一页</a>
+                    <a id="btnNextPage" href="javascript:;" class="enable">下一页</a>
+                    <a id="btnLastPage" href="javascript:;" class="enable">最后一页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table id="exportTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>日期</th>
+                <th>数量</th>
+                <th>箱号</th>
+                <th>起点</th>
+                <th>终点</th>
+                <th>货物名称</th>
+                <th>营业额</th>
+                <th>计件工资</th>
+                <th>过路费(ETC)</th>
+                <th>过路费(现金)</th>
+                <th>加油金额</th>
+                <th>洗车加水金额</th>
+                <th>尿素金额</th>
+                <th>交警罚款</th>
+                <th>路政罚款</th>
+                <th>维修金额</th>
+                <th>维修厂名称</th>
+                <th>维修项目</th>
+                <th>预支金额</th>
+                <th>ETC充值</th>
+                <th>小计</th>
+                <th>备注</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script type="text/javascript" src="__PUBLIC__/js/export/xlsx.core.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/export/tableExport.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/views/index.js?v=1.0.0"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+}
+
+html,
+body
+{
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    line-height: 1.4;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	 -webkit-overflow-scrolling: auto;          /* 滑动页面具有回弹效果 */
+    -webkit-text-size-adjust: 100%;             /* chrome内核浏览器 字体小于12px会保持12px 禁止浏览器调整字体大小*/
+}
+
+body
+{
+    position: relative;
+    font-family: "Microsoft YaHei UI Light", "Avenir", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    font-size: 12px;
+}
+
+ul
+{
+    list-style: none;
+}
+
+ul,
+p
+{
+    margin: 0;
+    padding: 0;
+}
+
+input,
+textarea,
+select
+{
+    border: 1px solid #979797;
+    background: transparent;
+    outline: none;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited
+{
+    color: inherit;
+}
+
+i,
+em
+{
+    font-style: normal;
+}
+
+img
+{
+    max-width: 100%;
+}
+
+img:after
+{
+    content: "";
+}
+
+textarea
+{
+    resize: none;
+}
+
+.btn
+{
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: opacity .2s;
+    text-align: center;
+}
+
+a[disabled],
+button[disabled],
+.btn[disabled]
+{
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+::-webkit-input-placeholder
+{
+    color: #c8c8c8;
+}
+
+:-moz-placeholder
+{
+    color: #c8c8c8;
+}
+
+::-moz-placeholder
+{
+    color: #c8c8c8;
+}
+
+:-ms-input-placeholder
+{
+    color: #c8c8c8;
+}
+
+.message-dialog
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: transparent;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.message-dialog.show
+{
+    opacity: 1;
+    z-index: 999;
+}
+
+.message-dialog .dialog-box
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60%;
+    width: fit-content;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .4);
+}

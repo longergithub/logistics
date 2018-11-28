@@ -1,0 +1,161 @@
+.v-main
+{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.center-wrapper
+{
+    position: relative;
+    flex: 1;
+    padding: 0 10px 10px;
+    overflow: hidden;
+}
+
+.center-wrapper .search-form
+{
+    min-width: 582px;
+}
+
+.center-wrapper .search-form li
+{
+    display: inline-block;
+    padding: 10px 10px 0 0;
+}
+
+.center-wrapper .search-form span
+{
+    display: inline-block;
+    text-align: right;
+    font-size: 14px;
+    width: 56px;
+}
+
+.center-wrapper .search-form input,
+.center-wrapper .search-form select
+{
+    font-size: 14px;
+    width: 120px;
+    height: 26px;
+    padding: 0 4px;
+}
+
+.center-wrapper .search-form .btn
+{
+    display: inline-block;
+    font-size: 14px;
+    width: 80px;
+    padding: 4px 0;
+    text-align: center;
+    color: #0092FF;
+    border: 1px solid #0092FF;
+    margin-right: 10px;
+}
+
+.center-wrapper .search-form .btn img
+{
+    display: none;
+    vertical-align: -3px;
+}
+
+.center-wrapper .table-box
+{
+    position: absolute;
+    top: 59px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    overflow: auto;
+}
+
+.center-wrapper table
+{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #979797;
+    border-right: 1px solid #979797;
+}
+
+.center-wrapper table th,
+.center-wrapper table td
+{
+    text-align: center;
+    border: 1px solid #979797;
+    border-right: none;
+    border-bottom: none;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.center-wrapper .fixed-tr td
+{
+    text-align: left;
+    padding: 0 10px 10px;
+}
+
+.center-wrapper .fixed-tr li
+{
+    display: table;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.center-wrapper .fixed-tr p
+{
+    display: table-cell;
+}
+
+.center-wrapper .fixed-tr p:first-of-type
+{
+    vertical-align: top;
+    min-width: 84px;
+    max-width: 84px;
+    text-align: right;
+}
+
+.center-wrapper .fixed-tr p:last-of-type
+{
+    width: 100%;
+}
+
+.center-wrapper .total-tr
+{
+    color: #ff0000;
+}
+
+.center-wrapper .paging-bar
+{
+    display: none;
+    padding-top: 10px;
+}
+
+.center-wrapper .paging-bar span
+{
+    padding-right: 20px;
+}
+
+.center-wrapper .paging-bar a
+{
+    padding-right: 10px;
+}
+
+.center-wrapper .paging-bar .enable:hover
+{
+    color: #0092FF;
+    text-decoration: underline;
+}
+
+.is-mobile .search-form
+{
+    min-width: 300px;
+}
+
+.is-mobile .table-box
+{
+    top: 141px;
+}

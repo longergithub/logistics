@@ -1,0 +1,94 @@
+.v-main
+{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.center-wrapper
+{
+    position: absolute;
+    top: 73px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.add-record-form
+{
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 10px 20px;
+}
+
+.add-record-form li
+{
+    display: flex;
+    padding-top: 10px;
+}
+
+.add-record-form li span
+{
+    width: 94px;
+    padding: 2px 10px 0 0;
+    text-align: right;
+}
+
+.add-record-form .checkbox-item
+{
+    padding-left: 94px;
+    align-items: center;
+}
+
+.add-record-form .checkbox-item span
+{
+    width: fit-content;
+    padding-right: 0;
+    padding-left: 4px;
+}
+
+.add-record-form li .textarea-span
+{
+    vertical-align: top;
+    padding-top: 0;
+}
+
+.add-record-form li select,
+.add-record-form li input,
+.add-record-form li textarea
+{
+    flex: 1;
+    padding: 4px;
+}
+
+.add-record-form .checkbox-item input
+{
+    flex: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#liFixedAmount,
+#liFixedFactoryName,
+#litxaFixedContent
+{
+    display: none;
+}
+
+.add-record-form #btnAdd
+{
+    font-size: 16px;
+    background: #0092FF;
+    color: #fff;
+    padding: 4px 20px;
+    border-radius: 5px;
+}
+
+.is-mobile .center-wrapper
+{
+    top: 92px;
+}
