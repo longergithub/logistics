@@ -53,7 +53,7 @@ class IndexAction extends UserCommonAction
 		M("user")->where(array("id", $this->credential["id"]))->save(array("password" => md5($password)));
 
         // 新增操作日志
-        $this->addOperateLog("update-password", $this->credential["name"], $this->credential["username"], "修改面膜成功");
+        $this->addOperateLog("update-password", $this->credential["name"], $this->credential["username"], "修改密码成功");
 
         $this->successAjaxReturn();
 	}
